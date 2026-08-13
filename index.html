@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="John Lennon — Desenvolvedor Full Stack em formação, com base em Front-end e evoluindo para Java e Spring MVC.">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@400..700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>John Lennon · Full Stack Developer</title>
+</head>
+
+<body>
+    <header>
+        <a href="#home" class="logo">John Lennon <span>{ }</span></a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <ul class="nav-list">
+            <li><a href="#home">Início</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#journey">Formação</a></li>
+            <li><a href="#services">Skills</a></li>
+            <li><a href="#portfolio">Portfólio</a></li>
+            <li><a href="#meu-formulario">Contato</a></li>
+        </ul>
+        <div class="top-btnn">
+            <a href="#meu-formulario" class="h-btn">Fale Comigo</a>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="main-content" data-aos="fade-up">
+            <h4><i class='bx bx-code-alt'></i> Full Stack Developer em formação</h4>
+            <h1>Eu sou <span>John Lennon</span></h1>
+            <p>Comecei no Front-end e hoje estou expandindo pra Back-end com <strong>Java</strong> e
+                <strong>Spring MVC</strong>, enquanto curso Engenharia de Software. Gosto de entender o produto de
+                ponta a ponta — da interface que o usuário vê até a lógica que faz tudo funcionar.</p>
+            <div class="social">
+                <a href="https://github.com/j0hnLennon" target="_blank" rel="noopener"><i class="ri-github-fill"></i></a>
+                <a href="https://www.linkedin.com/in/j0hn-lennon-106a892b1/?trk=opento_sprofile_topcard" target="_blank" rel="noopener"><i class="ri-linkedin-fill"></i></a>
+                <a href="https://www.instagram.com/eujohntorres/" target="_blank" rel="noopener"><i class="ri-instagram-fill"></i></a>
+                <a href="https://x.com/j0hntOrres" target="_blank" rel="noopener"><i class="ri-twitter-x-line"></i></a>
+            </div>
+            <div class="main-btn">
+                <a href="#meu-formulario" class="btn">Contato</a>
+                <a href="John Lennon R Torres.pdf" download class="btn btn2">Download CV</a>
+            </div>
+        </div>
+
+        <div class="hero-visual" data-aos="fade-left" data-aos-delay="150">
+            <div class="ide-window">
+                <div class="ide-titlebar">
+                    <div class="ide-dots"><span></span><span></span><span></span></div>
+                    <div class="ide-tabs">
+                        <span class="ide-tab">index.html</span>
+                        <span class="ide-tab">style.css</span>
+                        <span class="ide-tab active">Developer.java</span>
+                    </div>
+                </div>
+                <div class="ide-body">
+<pre><code><span class="tk-kw">public class</span> <span class="tk-cls">Developer</span> {
+
+    <span class="tk-kw">private</span> String name = <span class="tk-str">"John Lennon"</span>;
+    <span class="tk-kw">private</span> String[] stack = {
+        <span class="tk-str">"HTML"</span>, <span class="tk-str">"CSS"</span>, <span class="tk-str">"JavaScript"</span>,
+        <span class="tk-str">"Java"</span>, <span class="tk-str">"Spring MVC"</span>
+    };
+    <span class="tk-kw">private</span> String studying = <span class="tk-str">"Engenharia de Software"</span>;
+    <span class="tk-kw">private</span> <span class="tk-kw">boolean</span> openToWork = <span class="tk-lit">true</span>;
+
+    <span class="tk-kw">public</span> String greet() {
+        <span class="tk-kw">return</span> <span class="tk-str">"Vamos construir algo?"</span>;
+    }
+}<span class="ide-cursor">&nbsp;</span></code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-visual" data-aos="zoom-in-down">
+            <div class="avatar-frame">
+                <div class="avatar-badge">JL</div>
+                <div class="avatar-ring"></div>
+                <span class="avatar-tag tag-front">&lt;/&gt; front-end</span>
+                <span class="avatar-tag tag-back">☕ java</span>
+            </div>
+        </div>
+        <div class="about-text" data-aos="zoom-in-up">
+            <h2>Da interface <span>ao servidor</span></h2>
+            <p class="about-lead">Sou desenvolvedor com raiz em Front-end e venho me especializando em Back-end com
+                Java e Spring MVC, ao lado da graduação em Engenharia de Software. Curioso por resolver problemas
+                reais e escrever código organizado — pouco a pouco, de ponta a ponta.</p>
+            <div class="exp-area">
+                <p class="exp"><i class='bx bx-map'></i> <span>Botucatu, São Paulo</span></p>
+                <p class="exp"><i class='bx bx-envelope'></i> <span>johntorresc1@gmail.com</span></p>
+                <p class="exp"><i class='bx bx-briefcase-alt-2'></i> <span>Aberto a oportunidades Full Stack</span></p>
+            </div>
+            <a href="#portfolio" class="btn">Meus Projetos</a>
+        </div>
+    </section>
+
+    <section class="journey" id="journey">
+        <div class="center-text" data-aos="fade-down">
+            <h2>Minha <span>Trajetória</span></h2>
+            <p class="section-sub">A ordem importa: cada etapa apoia a próxima.</p>
+        </div>
+        <div class="timeline" data-aos="fade-up">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <span class="timeline-tag">Base</span>
+                <h3>Front-end</h3>
+                <p>HTML, CSS e JavaScript aplicados na prática — layouts responsivos, interatividade e projetos
+                    reais de interface.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <span class="timeline-tag">Atual</span>
+                <h3>Java &amp; Spring MVC</h3>
+                <p>Expandindo pro back-end: lógica de negócio, arquitetura MVC e construção de APIs com Java.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <span class="timeline-tag">Em curso</span>
+                <h3>Engenharia de Software</h3>
+                <p>Graduação em andamento, aprofundando fundamentos de arquitetura, boas práticas e engenharia de
+                    verdade por trás do código.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="center-text" data-aos="fade-down">
+            <h2>Minhas <span>Skills</span></h2>
+            <p class="section-sub">De quem constrói a tela até quem constrói a lógica por trás dela.</p>
+        </div>
+
+        <div class="skills-columns">
+            <div class="skills-col" data-aos="fade-right">
+                <h3 class="skills-col-title"><i class='bx bx-code-block'></i> Front-end</h3>
+                <div class="tag-grid">
+                    <div class="tag-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5">
+                        <span>HTML5</span>
+                    </div>
+                    <div class="tag-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3">
+                        <span>CSS3</span>
+                    </div>
+                    <div class="tag-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript">
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="tag-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React">
+                        <span>React</span>
+                    </div>
+                    <div class="tag-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="TypeScript">
+                        <span>TypeScript</span>
+                    </div>
+                    <div class="tag-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap">
+                        <span>Bootstrap</span>
+                    </div>
+                    <div class="tag-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" alt="Vite">
+                        <span>Vite</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-col" data-aos="fade-left">
+                <h3 class="skills-col-title back"><i class='bx bx-server'></i> Back-end &amp; Ferramentas</h3>
+                <div class="tag-grid">
+                    <div class="tag-item back">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java">
+                        <span>Java</span>
+                    </div>
+                    <div class="tag-item back">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" alt="Spring MVC">
+                        <span>Spring MVC</span>
+                    </div>
+                    <div class="tag-item back">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL">
+                        <span>SQL</span>
+                    </div>
+                    <div class="tag-item back">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git">
+                        <span>Git</span>
+                    </div>
+                    <div class="tag-item back">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub">
+                        <span>GitHub</span>
+                    </div>
+                    <div class="tag-item back">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/intellij/intellij-original.svg" alt="IntelliJ IDEA">
+                        <span>IntelliJ</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <div class="center-text" data-aos="fade-down">
+            <h2>Meu <span>Portfólio</span></h2>
+            <p class="section-sub">Projetos de front-end publicados — os primeiros projetos Java/Spring estão a
+                caminho.</p>
+        </div>
+        <div class="Portfolio-content" data-aos="zoom-in-down">
+            <div class="row">
+                <img src="img/eurocopa.png" alt="Preview do site Tabela Euro">
+                <div class="main-row">
+                    <div class="row-text">
+                        <h5>Front-end</h5>
+                    </div>
+                    <div class="row-icon">
+                        <i class="ri-github-fill"></i>
+                    </div>
+                </div>
+                <h4>Tabela da Euro</h4>
+                <div>
+                    <a href="EuroCopaGrupos/index.html" target="_blank"><button class="btn">Ver</button></a>
+                </div>
+            </div>
+            <div class="row">
+                <img src="img/slide1.png" alt="Preview do site de slides">
+                <div class="main-row">
+                    <div class="row-text">
+                        <h5>Front-end</h5>
+                    </div>
+                    <div class="row-icon">
+                        <i class="ri-github-fill"></i>
+                    </div>
+                </div>
+                <h4>Slideshow de Viagens</h4>
+                <div>
+                    <a href="slide/index.html" target="_blank"><button class="btn">Ver</button></a>
+                </div>
+            </div>
+            <div class="row">
+                <img src="img/calc.png" alt="Preview da calculadora">
+                <div class="main-row">
+                    <div class="row-text">
+                        <h5>Front-end</h5>
+                    </div>
+                    <div class="row-icon">
+                        <i class="ri-github-fill"></i>
+                    </div>
+                </div>
+                <h4>Calculadora</h4>
+                <div>
+                    <a href="calculadora/index.html" target="_blank"><button class="btn">Ver</button></a>
+                </div>
+            </div>
+            <div class="row">
+                <img src="img/netflix-1.png" alt="Preview da tela de login Netflix">
+                <div class="main-row">
+                    <div class="row-text">
+                        <h5>Front-end</h5>
+                    </div>
+                    <div class="row-icon">
+                        <i class="ri-github-fill"></i>
+                    </div>
+                </div>
+                <h4>Tela de Login Netflix</h4>
+                <div>
+                    <a href="netflix_login-main/Netflix Login/index.html" target="_blank"><button class="btn">Ver</button></a>
+                </div>
+            </div>
+            <div class="row row-soon">
+                <div class="soon-icon"><i class='bx bx-time-five'></i></div>
+                <div class="main-row">
+                    <div class="row-text">
+                        <h5>Back-end</h5>
+                    </div>
+                </div>
+                <h4>Projeto Java + Spring MVC</h4>
+                <p class="soon-text">Em construção — aplicando o que estou aprendendo em Java e Spring.</p>
+            </div>
+        </div>
+    </section>
+
+<section class="contact">
+  <div class="contact-form">
+    <form id="meu-formulario" action="https://formspree.io/f/myegjqwy" method="POST">
+      
+      <input type="text" name="name" placeholder="Seu Nome" required>
+      
+      <input type="email" name="email" placeholder="Seu E-mail" required>
+      
+      <textarea name="message" rows="6" placeholder="Escreva sua mensagem..." required></textarea>
+      
+      <button type="submit" id="btn-enviar" class="send-btn">Enviar Mensagem</button>
+
+      <!-- Mensagem de resposta que vai mudar de cor via JS -->
+      <p id="status-envio" class="status-mensagem"></p>
+
+    </form>
+  </div>
+</section>
+
+    <div class="footer">
+        <div class="copyright">
+            <p>© 2025 John Lennon, todos os direitos reservados.</p>
+        </div>
+        <a href="#home" class="scroll-top"><i class="ri-arrow-up-s-fill"></i>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 200,
+            duration: 900,
+            once: true,
+        });
+    </script>
+
+</body>
+
+</html>
