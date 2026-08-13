@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@100..800&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Anek Malayalam', sans-serif;
+    overflow-x: hidden;
+}
+
+table {
+    width: 100vw;
+    text-align: center;
+}
+
+.header {
+    background-image: url(../image/background1.png);
+    background-size: cover;
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    color: #ffffff;
+    box-shadow: 0px 2px 4px #888888;
+    border-collapse: collapse;
+    font-size: 0.85em;
+    position: fixed;
+    
+}
+
+#logo-principal {
+    width: 110px;
+    margin-top: 5px;
+}
+
+#logo td {
+    height: 60px;
+    padding: top 4px;
+
+}
+
+td {
+    height: 30px;
+    width: 104px;
+    color: #fff;
+
+}
+
+.nav-conteudo-lateral {
+    width: 400px;
+    
+}
+
+#detalhe:hover{
+    background-color: #223daa;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+#grupo:hover{
+        background-color: #cbcbcf;
+        /* cursor: pointer; */
+    } 
+
+.nav-destacado {
+    border-bottom: 3px solid #ffffff;
+    color: #ffffff;
+}
+
+.nav-destacado:hover {
+    background-color: #223daa;
+    cursor: pointer;
+
+}
+
+.tabela-eurocopa {
+    
+    border: 2px solid #e9eaeb;
+    border-top: none;
+    /* border-bottom: none; */
+    border-collapse: collapse;
+    width: 40vw;
+    height: 3vw;
+    margin-left: 30%;
+    font-size: 0.75em;
+    background-color: #ffffff;
+    z-index: -1;
+}
+
+.tabela-eurocopa th {
+    border-top: 1px solid #e0e0e0;
+    font-weight: 100;
+    color: #70758d;
+    padding: 10px;
+    height: 35px;
+    font-size: 13px;
+    font-weight: 700;
+
+}
+
+.tabela-eurocopa td {
+    border-top: 1px solid #e0e0e0;
+    font-weight: 100;
+    color: #000000;
+    padding: 10px;
+    height: 35px;
+    font-size: 1.2em;
+    font-weight: 700;
+
+
+}
+
+.tabela-colunas-bordas {
+    border-top: none !important;
+
+}
+
+#tabela-eurocopa-header{
+    padding: 15px;
+    padding-left: 20px;
+    background-color: #f1f3f4;
+    text-align: left;
+    color: #000;
+    font-size: 30px;
+    font-weight: 600;
+
+
+
+
+}
+
+.titulo-equipe {
+    width: 50%;
+    text-align: left;
+}
+
+#zoom:hover {
+    transform: scale(1.5);
+    transition: 200ms;
+}
+
+
+
+a:link {
+    text-decoration: none;
+    color: #000;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #000;
+}
+
+.titulo-ultimas-cinco {
+    width: 26%;
+}
+
+.titulo-ultimas-cinco img {
+    width: 16px;
+}
+
+.borda-azul {
+    border-left: 3px solid #4285f4;
+}
+
+.legenda table {
+    width: 35vw;
+    margin: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 35px;
+    border: 1px solid #e9eaeb;
+    border-radius: 3px;
+    padding: 15px;
+    text-align: left;
+    background-color: #f8f9fa;
+}
+
+.legenda th {
+    border-top: none;
+    font-size: 0.90em;
+    color: #000;
+    font-weight: 700;
+  
+}
+
+.legenda img {
+    width: 10px;
+}
+
+.legenda td {
+    border-top: none;
+    font-size: 1.0em;
+    width: 80%;
+}
+
+p {
+    font-family: test;
+    font-weight: 500;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+
+}
+
+
+
