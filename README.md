@@ -2,7 +2,7 @@
 
 Bem-vindo ao meu portfólio pessoal! Este site foi desenvolvido para apresentar minha trajetória como desenvolvedor Full Stack em formação, destacando meus projetos, habilidades e experiências.
 
-🔗 **[Acesse o site publicado](https://j0hnlennon.github.io/portfolio/)**
+🔗 **[Acesse o site publicado](https://j0hnlennon.github.io/portifolio/)**
 
 ---
 
@@ -31,7 +31,7 @@ Sou estudante de **Engenharia de Software** e desenvolvedor com raiz no **Front-
 
 ## 🧩 Estrutura do Projeto
 
-```bash
+
 portfolio/
 ├── index.html          # Página principal
 ├── style.css           # Estilos e tema escuro
