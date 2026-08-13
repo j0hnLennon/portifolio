@@ -816,7 +816,9 @@ form .send-btn:hover {
     border-color: var(--front-color);
 }
 
-/* ---------- Responsive ---------- */
+/* ============================================== */
+/* ========== RESPONSIVIDADE CORRIGIDA ========== */
+/* ============================================== */
 
 @media (max-width: 1400px) {
     header, header.sticky { padding: 18px 6%; }
@@ -864,33 +866,67 @@ form .send-btn:hover {
     }
 }
 
+/* ===== MENU MOBILE CORRIGIDO ===== */
 @media (max-width: 992px) {
     #menu-icon {
         display: block;
+        font-size: 32px;
+        z-index: 10001;
+        cursor: pointer;
+        color: var(--text-color);
+        transition: all .3s ease;
     }
 
     .nav-list {
-        position: absolute;
-        top: 100%;
+        position: fixed;
+        top: 0;
         right: -100%;
-        width: 260px;
+        width: 280px;
         height: 100vh;
-        background: var(--panel-color);
+        background: rgba(20, 27, 37, 0.98);
+        backdrop-filter: blur(12px);
         display: flex;
         flex-direction: column;
+        justify-content: center;
         padding: 40px 30px;
-        transition: all .4s ease;
+        transition: all .5s ease-in-out;
         border-left: 1px solid var(--border-color);
+        box-shadow: -10px 0 40px rgba(0, 0, 0, 0.6);
+        z-index: 999;
     }
 
-    .nav-list.open {
+    .nav-list.active {
         right: 0;
     }
 
     .nav-list a {
         display: block;
-        margin: 18px 0;
-        font-size: 1.1rem;
+        margin: 12px 0;
+        font-size: 1.2rem;
+        color: var(--text-color);
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        transition: all .3s ease;
+    }
+
+    .nav-list a:hover {
+        color: var(--front-color);
+        padding-left: 10px;
+    }
+
+    .top-btnn {
+        display: none;
+    }
+
+    header, header.sticky {
+        padding: 16px 6%;
+        background: rgba(10, 14, 20, 0.95);
+        backdrop-filter: blur(10px);
+    }
+
+    header.sticky {
+        padding: 12px 6%;
+        background: rgba(10, 14, 20, 0.98);
     }
 
     .skills-columns {
@@ -899,6 +935,7 @@ form .send-btn:hover {
 
     .timeline {
         grid-template-columns: 1fr;
+        gap: 2.5rem;
     }
 
     .timeline::before {
@@ -906,32 +943,289 @@ form .send-btn:hover {
     }
 
     .timeline-item {
-        padding-left: 25px;
+        padding-left: 30px;
         padding-top: 0;
     }
 
     .timeline-dot {
         top: 5px;
+        left: 0;
     }
 }
 
+/* ===== TELAS PEQUENAS ===== */
 @media (max-width: 600px) {
     :root {
         --h1-font: 2.5rem;
         --h2-font: 1.8rem;
+        --p-font: 0.95rem;
     }
 
-    .top-btnn {
-        display: none;
+    header, header.sticky {
+        padding: 12px 5%;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-list {
+        width: 100%;
+        height: 100vh;
+        padding: 80px 30px 30px;
+        border-left: none;
+        background: rgba(10, 14, 20, 0.98);
+    }
+
+    .nav-list a {
+        font-size: 1.1rem;
+        margin: 10px 0;
+        padding: 12px 0;
+    }
+
+    .main-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 
     .main-btn .btn2 {
         margin-left: 0;
-        margin-top: 10px;
+    }
+
+    section {
+        padding: 80px 5% 60px;
+    }
+
+    .hero {
+        padding-top: 100px;
+        gap: 2rem;
+        min-height: auto;
+    }
+
+    .main-content h1 {
+        font-size: var(--h1-font);
+        margin: 15px 0;
+    }
+
+    .main-content p {
+        font-size: var(--p-font);
+    }
+
+    .social {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .social i {
+        width: 38px;
+        height: 38px;
+        font-size: 16px;
+        margin-right: 0;
+    }
+
+    .ide-window {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+
+    .ide-body {
+        padding: 15px 12px;
+        overflow-x: auto;
+    }
+
+    .ide-body code {
+        font-size: 0.7rem;
+        line-height: 1.6;
+    }
+
+    .ide-tabs {
+        flex-wrap: wrap;
+    }
+
+    .ide-tab {
+        font-size: 0.65rem;
+        padding: 5px 10px;
+    }
+
+    .about {
+        padding: 80px 5% 60px;
+        text-align: center;
+    }
+
+    .about-text h2 {
+        font-size: var(--h2-font);
+    }
+
+    .avatar-frame {
+        width: 200px;
+        height: 200px;
+    }
+
+    .avatar-badge {
+        width: 140px;
+        height: 140px;
+        font-size: 2.8rem;
+    }
+
+    .avatar-tag {
+        font-size: 0.6rem;
+        padding: 4px 10px;
+    }
+
+    .tag-front {
+        top: -10px;
+        left: -10px;
+    }
+
+    .tag-back {
+        bottom: -10px;
+        right: -5px;
+    }
+
+    .exp-area p.exp {
+        font-size: 0.9rem;
+        justify-content: center;
+    }
+
+    .tag-grid {
+        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+        gap: 10px;
+    }
+
+    .tag-item {
+        padding: 10px 12px;
+    }
+
+    .tag-item span {
+        font-size: 0.8rem;
+    }
+
+    .tag-item img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .Portfolio-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .row img {
+        height: 160px;
+    }
+
+    .row h4 {
+        font-size: 1.1rem;
+    }
+
+    .contact-form form {
+        width: 100%;
+    }
+
+    form input, form textarea {
+        padding: 14px;
+        font-size: 0.95rem;
     }
 
     .footer {
         flex-direction: column;
         text-align: center;
+        padding: 20px 5%;
+        gap: 1rem;
+    }
+
+    .footer .copyright p {
+        font-size: 0.8rem;
+    }
+
+    .scroll-top i {
+        width: 38px;
+        height: 38px;
+        font-size: 20px;
+    }
+
+    .row-soon {
+        min-height: 180px;
+    }
+
+    .soon-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
+
+/* ===== TELAS MUITO PEQUENAS ===== */
+@media (max-width: 400px) {
+    :root {
+        --h1-font: 2rem;
+        --h2-font: 1.5rem;
+    }
+
+    .logo {
+        font-size: 17px;
+    }
+
+    #menu-icon {
+        font-size: 26px;
+    }
+
+    .nav-list a {
+        font-size: 1rem;
+        margin: 8px 0;
+        padding: 10px 0;
+    }
+
+    .main-content h4 {
+        font-size: 0.7rem;
+        padding: 4px 10px;
+    }
+
+    .ide-body code {
+        font-size: 0.55rem;
+    }
+
+    .tag-grid {
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    }
+
+    .tag-item {
+        padding: 8px 8px;
+        gap: 6px;
+    }
+
+    .tag-item span {
+        font-size: 0.7rem;
+    }
+
+    .tag-item img {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* ===== MODO LANDSCAPE EM MOBILE ===== */
+@media (max-height: 600px) and (orientation: landscape) {
+    .hero {
+        padding-top: 80px;
+        min-height: auto;
+    }
+
+    .nav-list {
+        padding: 60px 30px 20px;
+    }
+
+    .nav-list a {
+        margin: 6px 0;
+        font-size: 0.95rem;
+        padding: 8px 0;
+    }
+
+    .ide-window {
+        max-width: 100%;
     }
 }
