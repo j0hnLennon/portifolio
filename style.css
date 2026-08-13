@@ -798,82 +798,204 @@ form .send-btn:hover {
 
 /* ---------- Responsive ---------- */
 
-@media (max-width: 1700px) {
-    header { padding: 20px 8%; }
-    header.sticky { padding: 14px 8%; }
-    section { padding: 100px 8% 80px; }
-    .footer { padding: 20px 8%; }
-    .logo { font-size: 22px; }
+@media (max-width: 1400px) {
+    header, header.sticky { padding: 18px 6%; }
+    section { padding: 100px 6% 80px; }
+    .footer { padding: 20px 6%; }
 }
 
-@media (max-width: 1380px) {
-    header { padding: 20px 5%; }
-    header.sticky { padding: 14px 5%; }
-    section { padding: 100px 5% 80px; }
-    .footer { padding: 20px 5%; }
-    .hero { padding-top: 140px; }
-}
-
-@media (max-width: 1240px) {
+/* Tablets em modo Paisagem / Notebooks Menores (até 1200px) */
+@media (max-width: 1200px) {
     .hero {
         grid-template-columns: 1fr;
         text-align: center;
+        padding-top: 130px;
     }
-    .main-content p { margin: 0 auto; }
-    .social { justify-content: center; display: flex; }
-    .hero-visual { margin-top: 3rem; }
+    
+    .main-content p { 
+        margin: 0 auto; 
+    }
+    
+    .social { 
+        justify-content: center; 
+        display: flex; 
+    }
+    
+    .hero-visual { 
+        margin-top: 2rem; 
+        width: 100%;
+    }
+
+    .ide-window {
+        max-width: 100%;
+    }
+
     .about {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 2.5rem;
         text-align: center;
     }
-    .about-lead { margin: 0 auto; }
-    .exp-area .exp { justify-content: center; }
-    .timeline { grid-template-columns: 1fr; gap: 2.6rem; }
-    .timeline::before { display: none; }
-    .skills-columns { grid-template-columns: 1fr; }
-    :root {
-        --h1-font: 3.4rem;
-        --h2-font: 2.1rem;
-        --p-font: 15px;
+    
+    .about-lead { 
+        margin: 0 auto; 
+    }
+    
+    .exp-area .exp { 
+        justify-content: center; 
+    }
+    
+    .timeline { 
+        grid-template-columns: 1fr; 
+        gap: 2.5rem; 
+    }
+    
+    .timeline::before { 
+        display: none; 
+    }
+    
+    .skills-columns { 
+        grid-template-columns: 1fr; 
     }
 }
 
+/* Tablets em Modo Retrato (até 950px) */
 @media (max-width: 950px) {
-    #menu-icon { display: block; }
+    #menu-icon { 
+        display: block; 
+    }
+
+    .top-btnn { 
+        display: none; /* Esconde o botão do topo no menu mobile para evitar colisão */
+    }
+
     .nav-list {
-        position: absolute;
-        top: 100%;
+        position: fixed; /* Alterado de absolute para fixed para travar na tela */
+        top: 0;
         right: -100%;
-        width: 260px;
-        min-height: 100vh;
+        width: 70%;
+        max-width: 300px;
+        height: 100vh;
         display: flex;
         flex-direction: column;
-        background: var(--bg-color);
+        justify-content: center;
+        background: var(--panel-color);
         border-left: 1px solid var(--border-color);
         transition: all .4s ease;
+        z-index: 10000;
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
     }
+
     .nav-list a {
         display: block;
-        padding: 17px;
-        font-size: 20px;
+        padding: 16px 24px;
+        font-size: 1.1rem;
         margin-left: 0;
     }
-    .nav-list.active { right: 0; }
-    .ide-body code { font-size: .74rem; }
-}
 
-@media (max-width: 680px) {
-    .main-content p { width: 100%; }
-    .avatar-tag { display: none; }
-}
-
-@media (max-width: 470px) {
-    :root {
-        --h1-font: 2.6rem;
-        --h2-font: 1.7rem;
+    .nav-list.active { 
+        right: 0; 
     }
-    .avatar-frame, .avatar-ring { width: 220px; height: 220px; }
-    .avatar-badge { width: 160px; height: 160px; font-size: 3rem; }
-    form .send-btn { width: 100%; text-align: center; }
+
+    /* Prevenção de estouro na janela IDE no mobile */
+    .ide-body {
+        padding: 16px;
+    }
+
+    .ide-body code { 
+        font-size: .75rem; 
+        white-space: pre-wrap; /* Permite a quebra suave de linha no código se a tela for muito estreita */
+        word-break: break-all;
+    }
+}
+
+/* Celulares Grandes / Padrão (até 680px) */
+@media (max-width: 680px) {
+    section { 
+        padding: 80px 5% 60px; 
+    }
+
+    :root {
+        --h1-font: 2.8rem;
+        --h2-font: 2rem;
+    }
+
+    .main-content p { 
+        width: 100%; 
+    }
+
+    /* Esconde as tags flutuantes para não estourarem a largura da tela em celulares */
+    .avatar-tag { 
+        display: none; 
+    }
+
+    .avatar-frame {
+        width: 240px;
+        height: 240px;
+    }
+
+    .avatar-badge {
+        width: 180px;
+        height: 180px;
+        font-size: 3.2rem;
+    }
+
+    .tag-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 10px;
+    }
+
+    .Portfolio-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Celulares Menores / Compactos (até 440px - iPhone SE, Galaxy A series, etc.) */
+@media (max-width: 440px) {
+    header, header.sticky { 
+        padding: 14px 4%; 
+    }
+
+    :root {
+        --h1-font: 2.2rem;
+        --h2-font: 1.6rem;
+    }
+
+    .logo { 
+        font-size: 20px; 
+    }
+
+    .main-btn {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn, .btn2 {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .avatar-frame {
+        width: 200px;
+        height: 200px;
+    }
+
+    .avatar-badge {
+        width: 150px;
+        height: 150px;
+        font-size: 2.6rem;
+    }
+
+    form .send-btn { 
+        width: 100%; 
+        text-align: center; 
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
 }
