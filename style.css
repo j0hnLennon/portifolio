@@ -97,6 +97,7 @@ span {
     z-index: 10001;
     cursor: pointer;
     display: none;
+    color: var(--text-color);
 }
 
 .h-btn {
@@ -124,7 +125,7 @@ header.sticky {
     padding: 16px 16%;
 }
 
-/* ---------- Layout base ---------- */
+/* ---------- Layout Base ---------- */
 
 section {
     padding: 120px 16% 90px;
@@ -156,6 +157,7 @@ section {
     font-size: 15px;
     font-weight: 600;
     transition: all .3s ease;
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -248,7 +250,7 @@ section {
     transform: translateY(-3px);
 }
 
-/* IDE / code window signature element */
+/* IDE / Code Window */
 
 .hero-visual {
     display: flex;
@@ -457,7 +459,7 @@ section {
     font-weight: 400;
 }
 
-/* ---------- Journey / timeline ---------- */
+/* ---------- Journey / Timeline ---------- */
 
 .journey {
     background: var(--bg-color);
@@ -640,7 +642,7 @@ section {
     color: var(--front-color);
 }
 
-.row i {
+.row-icon i {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -651,6 +653,12 @@ section {
     color: var(--text-color);
     background: #0d131b;
     border: 1px solid var(--border-color);
+    transition: all .3s ease;
+}
+
+.row-icon i:hover {
+    color: var(--front-color);
+    border-color: var(--front-color);
 }
 
 .row h4 {
@@ -766,6 +774,12 @@ form .send-btn:hover {
     box-shadow: 0 0 24px rgba(94, 234, 212, .3);
 }
 
+.status-mensagem {
+    margin-top: 15px;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
 /* ---------- Footer ---------- */
 
 .footer {
@@ -794,6 +808,12 @@ form .send-btn:hover {
     border-radius: 50%;
     color: var(--front-color);
     font-size: 24px;
+    transition: all .3s ease;
+}
+
+.scroll-top i:hover {
+    transform: translateY(-3px);
+    border-color: var(--front-color);
 }
 
 /* ---------- Responsive ---------- */
@@ -804,8 +824,12 @@ form .send-btn:hover {
     .footer { padding: 20px 6%; }
 }
 
-/* Tablets em modo Paisagem / Notebooks Menores (até 1200px) */
 @media (max-width: 1200px) {
+    :root {
+        --h1-font: 3.4rem;
+        --h2-font: 2.2rem;
+    }
+
     .hero {
         grid-template-columns: 1fr;
         text-align: center;
@@ -826,176 +850,88 @@ form .send-btn:hover {
         width: 100%;
     }
 
-    .ide-window {
-        max-width: 100%;
-    }
-
     .about {
         grid-template-columns: 1fr;
-        gap: 2.5rem;
         text-align: center;
     }
-    
-    .about-lead { 
-        margin: 0 auto; 
+
+    .about-lead {
+        margin: 0 auto;
     }
-    
-    .exp-area .exp { 
-        justify-content: center; 
-    }
-    
-    .timeline { 
-        grid-template-columns: 1fr; 
-        gap: 2.5rem; 
-    }
-    
-    .timeline::before { 
-        display: none; 
-    }
-    
-    .skills-columns { 
-        grid-template-columns: 1fr; 
+
+    .exp-area p.exp {
+        justify-content: center;
     }
 }
 
-/* Tablets em Modo Retrato (até 950px) */
-@media (max-width: 950px) {
-    #menu-icon { 
-        display: block; 
-    }
-
-    .top-btnn { 
-        display: none; /* Esconde o botão do topo no menu mobile para evitar colisão */
+@media (max-width: 992px) {
+    #menu-icon {
+        display: block;
     }
 
     .nav-list {
-        position: fixed; /* Alterado de absolute para fixed para travar na tela */
-        top: 0;
+        position: absolute;
+        top: 100%;
         right: -100%;
-        width: 70%;
-        max-width: 300px;
+        width: 260px;
         height: 100vh;
+        background: var(--panel-color);
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        background: var(--panel-color);
-        border-left: 1px solid var(--border-color);
+        padding: 40px 30px;
         transition: all .4s ease;
-        z-index: 10000;
-        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+        border-left: 1px solid var(--border-color);
+    }
+
+    .nav-list.open {
+        right: 0;
     }
 
     .nav-list a {
         display: block;
-        padding: 16px 24px;
+        margin: 18px 0;
         font-size: 1.1rem;
-        margin-left: 0;
     }
 
-    .nav-list.active { 
-        right: 0; 
-    }
-
-    /* Prevenção de estouro na janela IDE no mobile */
-    .ide-body {
-        padding: 16px;
-    }
-
-    .ide-body code { 
-        font-size: .75rem; 
-        white-space: pre-wrap; /* Permite a quebra suave de linha no código se a tela for muito estreita */
-        word-break: break-all;
-    }
-}
-
-/* Celulares Grandes / Padrão (até 680px) */
-@media (max-width: 680px) {
-    section { 
-        padding: 80px 5% 60px; 
-    }
-
-    :root {
-        --h1-font: 2.8rem;
-        --h2-font: 2rem;
-    }
-
-    .main-content p { 
-        width: 100%; 
-    }
-
-    /* Esconde as tags flutuantes para não estourarem a largura da tela em celulares */
-    .avatar-tag { 
-        display: none; 
-    }
-
-    .avatar-frame {
-        width: 240px;
-        height: 240px;
-    }
-
-    .avatar-badge {
-        width: 180px;
-        height: 180px;
-        font-size: 3.2rem;
-    }
-
-    .tag-grid {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-        gap: 10px;
-    }
-
-    .Portfolio-content {
+    .skills-columns {
         grid-template-columns: 1fr;
     }
+
+    .timeline {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline::before {
+        display: none;
+    }
+
+    .timeline-item {
+        padding-left: 25px;
+        padding-top: 0;
+    }
+
+    .timeline-dot {
+        top: 5px;
+    }
 }
 
-/* Celulares Menores / Compactos (até 440px - iPhone SE, Galaxy A series, etc.) */
-@media (max-width: 440px) {
-    header, header.sticky { 
-        padding: 14px 4%; 
-    }
-
+@media (max-width: 600px) {
     :root {
-        --h1-font: 2.2rem;
-        --h2-font: 1.6rem;
+        --h1-font: 2.5rem;
+        --h2-font: 1.8rem;
     }
 
-    .logo { 
-        font-size: 20px; 
+    .top-btnn {
+        display: none;
     }
 
-    .main-btn {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .btn, .btn2 {
-        width: 100%;
-        text-align: center;
+    .main-btn .btn2 {
         margin-left: 0;
         margin-top: 10px;
-    }
-
-    .avatar-frame {
-        width: 200px;
-        height: 200px;
-    }
-
-    .avatar-badge {
-        width: 150px;
-        height: 150px;
-        font-size: 2.6rem;
-    }
-
-    form .send-btn { 
-        width: 100%; 
-        text-align: center; 
     }
 
     .footer {
         flex-direction: column;
         text-align: center;
-        gap: 1rem;
     }
 }
